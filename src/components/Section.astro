@@ -1,0 +1,12 @@
+---
+interface Props {
+    sectionName: string
+}
+
+const {sectionName} = Astro.props
+---
+
+<div class="flex flex-row gap-16 ">
+    <p class="italic font-bold text-gray-600">{sectionName}</p>
+    <slot/>
+</div>

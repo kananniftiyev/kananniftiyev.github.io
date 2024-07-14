@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Section from '../components/Section.astro';
+
+
+---
+
+<Layout title="Kanan Niftiyev">
+	<main>
+		<div class="center top">
+			<h1 class="mb-1 text-black font-bold text-2xl">Kanan Niftiyev</h1>
+			<h2 class="mb-4  text-black font-medium">Software Engineer</h2>
+			<h3 class=" text-zinc-400 italic font-medium ">Warsaw, Masovian, Poland</h3>
+		</div>
+		<Section sectionName='Links'>		<Button href='github.com/kananniftiyev' logo='' text='Github'><i class="fa fa-github" style="font-size:22px"></i></Button>
+		</Section>
+	</main>
+</Layout>
+
+<style>
+	html{
+		background-color: white;
+	}
+	.center{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh; /* Adjust as needed */
+	}
+	.top{
+		color: wheat;
+		display: flex;
+		flex-direction: column;
+	}
+</style>
+

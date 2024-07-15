@@ -2,6 +2,35 @@
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import Section from '../components/Section.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Footer from '../components/Footer.astro';
+
+
+const projectData_CloudCourier = {
+	projectName: 'CloudCourier📦',
+	link: 'https://github.com/kananniftiyev/CloudCourier',
+	projectDesc: 'CloudCourier📦 is a versatile and secure file transfer platform designed to streamline the way you share and manage your files. Whether you need to send large documents, images, videos, or any other file type, CloudCourier📦 simplifies the process while ensuring data privacy and control.'
+};
+
+const projectData_FileGuard = {
+	projectName: 'Fileguard 🛡️',
+	link: 'https://github.com/kananniftiyev/fileguard',
+	projectDesc: 'Fileguard is a secure file backup utility, facilitating encrypted transfers from designated folders to specified servers, with customizable settings for seamless data protection and management.'
+};
+
+const projectData_SkillFolio = {
+	projectName: 'Skillfolio 🚀',
+	link: 'https://github.com/kananniftiyev/skillfolio',
+	projectDesc: 'Skillfolio: Showcase your talent effortlessly with our sleek, dynamic web portfolios.'
+};
+
+const Social = {
+	github: "https://www.github.com/kananniftiyev",
+	linkedin: "https://www.linkedin.com/in/kanan-niftiyev-0b9190218/",
+	instagram: "https://www.instagram.com/kananniftiyev",
+	mail: "mailto:kananniftiyev@hotmail.com",
+	cv: "https://drive.google.com/file/d/1tdm31iZKjwdsC_HxfMOswbtbTJjs5k1i/view?usp=drive_link"
+}
 
 
 ---
@@ -10,11 +39,34 @@ import Section from '../components/Section.astro';
 	<main>
 		<div class="center top">
 			<h1 class="mb-1 text-black font-bold text-2xl">Kanan Niftiyev</h1>
-			<h2 class="mb-4  text-black font-medium">Software Engineer</h2>
+			<h2 class="mb-4  text-black font-medium text-lg">Junior Software Engineer</h2>
 			<h3 class=" text-zinc-400 italic font-medium ">Warsaw, Masovian, Poland</h3>
 		</div>
-		<Section sectionName='Links'>		<Button href='github.com/kananniftiyev' logo='' text='Github'><i class="fa fa-github" style="font-size:22px"></i></Button>
+		<Section sectionName='Links'>
+			<div class="flex flex-row gap-3">
+				<Button href={Social.github} text='Github'><i class="fa fa-github" style="font-size:22px"></i></Button>
+				<Button href={Social.linkedin} text='Linkedin'><i class="fa fa-linkedin" style="font-size:22px"></i></Button>
+				<Button href={Social.instagram} text='Instagram'><i class="fa fa-instagram" style="font-size:22px"></i></Button>
+				<Button href={Social.cv} text='Resume'><i class="fa-solid fa-file" style="font-size:22px"></i></Button>
+			</div>
 		</Section>
+		<Section sectionName='About'>
+			<div class="flex flex-col gap-5 font-semibold">
+				<p>Computer Science student with a passion for backend technologies and a strong foundation in programming languages, including C, Golang, Java and Python.</p>
+				<p>Proficient in various backend frameworks and tools such as Spring Boot, Django, and Node.js. Experienced with database management systems like MySQL and MongoDB. Skilled in version control using Git and familiar with containerization tools such as Docker. Adept at implementing RESTful APIs and working with cloud services like AWS.</p>
+				<p>Actively seeking opportunities to expand skillset and stay current with the latest advancements in current technologies.</p>
+				<p>To reach me use <a class="text-[#3A81F5] font-semibold" href={Social.linkedin}>linkedin</a> or <a class="text-[#3A81F5] font-semibold" href={Social.mail}>mail</a></p>
+			</div>
+		</Section>
+		<Section sectionName='Work'>
+			<p class="font-semibold">Previously Software Engineer Intern @ <a class="text-[#3A81F5] font-semibold " href="https://www.linkedin.com/in/kanan-niftiyev-0b9190218/">Subartesian LLC</a></p>
+		</Section>
+		<Section sectionName='Projects'>
+			<ProjectCard tags={["Golang", "React", "PostgreSQL", "MongoDB"]} mainColor='#fff' hoverColor='#F5F5F5' projectName={projectData_CloudCourier.projectName} link={projectData_CloudCourier.link} projectDesc={projectData_CloudCourier.projectDesc}/>
+			<ProjectCard tags={["Golang", "OAuth2", "PostgreSQL", "Docker"]} mainColor='#fff' hoverColor='#F5F5F5' projectName={projectData_FileGuard.projectName} link={projectData_FileGuard.link} projectDesc={projectData_FileGuard.projectDesc}/>
+			<ProjectCard tags={["Python", "Django", "Nuxt.js", "Docker"]} mainColor='#fff' hoverColor='#F5F5F5' projectName={projectData_SkillFolio.projectName} link={projectData_SkillFolio.link} projectDesc={projectData_SkillFolio.projectDesc}/>
+		</Section>
+		 <!-- <div class="signature">Kanan Niftiyev</div> --> 
 	</main>
 </Layout>
 
@@ -26,12 +78,26 @@ import Section from '../components/Section.astro';
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 100vh; /* Adjust as needed */
+		margin-bottom: 120px;
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+		margin-top: 40px; /* Adjust as needed */
 	}
 	.top{
-		color: wheat;
 		display: flex;
 		flex-direction: column;
 	}
+	.signature {
+		font-family: "Kalam", cursive;
+		font-size: 2em;
+		color: #333;
+		display: block;
+		text-align: right;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		margin-top: 120px; /* Adjust as needed */
+  }
 </style>
 

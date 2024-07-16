@@ -1,0 +1,60 @@
+/* Regular */
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/inter/Inter-Regular.ttf") format("ttf");
+}
+
+/* Bold */
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/inter/Inter-Bold.ttf") format("ttf");
+}
+
+/* Extra Light */
+@font-face {
+  font-family: "Inter";
+  font-weight: 200;
+  font-style: normal;
+  src: url("../fonts/inter/Inter-ExtraLight.ttf") format("ttf");
+}
+
+/* Light */
+@font-face {
+  font-family: "Inter";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/inter/Inter-Light.ttf") format("ttf");
+}
+
+/* Medium */
+@font-face {
+  font-family: "Inter";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/inter/Inter-Medium.ttf") format("ttf");
+}
+
+/* Semi-Bold */
+@font-face {
+  font-family: "Inter";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/inter/Inter-SemiBold.ttf") format("ttf");
+}
+
+/* Black */
+@font-face {
+  font-family: "Inter";
+  font-weight: 900;
+  font-style: normal;
+  src: url("../fonts/inter/Inter-ExtraBold.ttf") format("ttf");
+}
+
+/* Usage */
+body {
+  font-family: "Inter", sans-serif;
+}

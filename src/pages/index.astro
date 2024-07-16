@@ -4,6 +4,8 @@ import Button from '../components/Button.astro';
 import Section from '../components/Section.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
 
 
 const projectData_CloudCourier = {
@@ -67,7 +69,6 @@ const Social = {
 			<ProjectCard tags={["Golang", "OAuth2", "PostgreSQL", "Docker"]} mainColor="#fff" hoverColor="#F5F5F5" projectName={projectData_FileGuard.projectName} link={projectData_FileGuard.link} projectDesc={projectData_FileGuard.projectDesc} />
 			<ProjectCard tags={["Python", "Django", "Nuxt.js", "Docker"]} mainColor="#fff" hoverColor="#F5F5F5" projectName={projectData_SkillFolio.projectName} link={projectData_SkillFolio.link} projectDesc={projectData_SkillFolio.projectDesc} />
 		  </Section>
-		  <!-- <div class="signature">Kanan Niftiyev</div> -->
 		</main>
 	  </div>
 </Layout>
@@ -90,16 +91,5 @@ const Social = {
 		display: flex;
 		flex-direction: column;
 	}
-	.signature {
-		font-family: "Kalam", cursive;
-		font-size: 2em;
-		color: #333;
-		display: block;
-		text-align: right;
-		margin: 0 auto;
-		display: flex;
-		justify-content: center;
-		margin-top: 120px; /* Adjust as needed */
-  }
 </style>
 
